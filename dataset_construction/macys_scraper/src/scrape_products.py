@@ -18,8 +18,11 @@ def get_brand_prod_title(doc):
     # otherwise, get the string
     else:
 
-        # get string
-        brand = brand_ele[0].text_content().strip()
+        try:
+            # get string
+            brand = brand_ele[0].text_content().strip()
+        except:
+            brand = 'N/A'
 
     # get the title
     title_ele = doc.xpath('//div[contains(@class, "product-title")]')
@@ -32,9 +35,11 @@ def get_brand_prod_title(doc):
 
     # otherwise, get the string
     else:
-
-        # get string
-        title = title_ele[0].text_content().strip()
+        try:
+            # get string
+            title = title_ele[0].text_content().strip()
+        except:
+            title = 'N/A'
 
     # return a tuple of the brand and title
     return (brand, title)
@@ -53,9 +58,12 @@ def get_prod_description(doc):
 
     # otherwise, get the content
     else:
+        try:
 
-        # set content equal to the paragraph_info var
-        paragraph_info = prod_desc_ele[0].text_content().strip()
+            # set content equal to the paragraph_info var
+            paragraph_info = prod_desc_ele[0].text_content().strip()
+        except:
+            paragraph_info = 'N/A'
 
     # get the path to the product bullet list
     bullet_ele = doc.xpath('//ul[contains(@data-auto, "product-description-bullets")]')
@@ -69,11 +77,15 @@ def get_prod_description(doc):
     # otherwise, get the content
     else:
 
-        # set content equal to the paragraph_info var
-        nested_bullets = bullet_ele[0].xpath('.//li')
+        try:
+            # set content equal to the paragraph_info var
+            nested_bullets = bullet_ele[0].xpath('.//li')
 
-        # get the text
-        bullet_info = [ele.text_content().strip() for ele in nested_bullets]
+            # get the text
+            bullet_info = [ele.text_content().strip() for ele in nested_bullets]
+
+        except:
+            bullet_info = 'N/A'
 
     # return the information
     return {
@@ -126,8 +138,11 @@ def get_related_products(doc):
     else:
 
         # get all images
-        return ["https://www.macys.com" + ele.xpath('./*')[0].attrib["href"]
+        try:
+            return ["https://www.macys.com" + ele.xpath('./*')[0].attrib["href"]
                 for ele in related_eles]
+        except:
+            return []
 
 # get the product price
 def get_price(doc):
@@ -136,7 +151,10 @@ def get_price(doc):
 
     # if the length is not 0, then this is the price you want to return
     if len(sale_price_ele) > 0:
-        return float(sale_price_ele[0].xpath('./*')[0].text_content().strip().replace('$','').replace(',', ''))
+        try:
+            return float(sale_price_ele[0].xpath('./*')[0].text_content().strip().replace('$','').replace(',', ''))
+        except:
+            return -1
 
     # otherwise, return nothing
     else:

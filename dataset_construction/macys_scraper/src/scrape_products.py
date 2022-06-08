@@ -4,6 +4,15 @@ from tqdm import tqdm
 from lxml.html import fromstring
 
 
+# write out product urls
+def write_products(product_dict: dict, out_path: str):
+
+    # open the file
+    with open(out_path, 'a') as fp:
+
+        # write out the results
+        fp.writelines(str(product_dict) + '\n')
+
 # function to get the brand and product title
 def get_brand_prod_title(doc):
     # get the brand
@@ -242,6 +251,9 @@ if __name__ == "__main__":
 
         # scrape the urls
         scraped_data = scrape_product(doc, url)
+
+        # write out products
+        write_products(scraped_data, out_path="../data/macys_scraped.txt")
 
         # add to list
         scraped_list.append(scraped_data)

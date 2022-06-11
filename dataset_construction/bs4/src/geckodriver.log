@@ -1,0 +1,51 @@
+1654970531612	geckodriver	INFO	Listening on 127.0.0.1:60127
+1654970534669	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "60128" "-no-remote" "-profile" "C:\\Users\\Haji\\AppData\\Local\\Temp\\rust_mozprofileETPE4b"
+*** You are running in headless mode.
+1654970553026	geckodriver	INFO	Listening on 127.0.0.1:60212
+1654970556052	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "60213" "-no-remote" "-profile" "C:\\Users\\Haji\\AppData\\Local\\Temp\\rust_mozprofilevJGJ7p"
+*** You are running in headless mode.
+1654970556522	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:60213
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Haji\\AppData\\Local\\Temp\\rust_mozprofilevJGJ7p\\search.json.mozlz4", (void 0)))
+1654970557635	Marionette	INFO	Listening on port 60229
+DevTools listening on ws://localhost:60213/devtools/browser/b78f19b0-4931-471f-b9bd-aed41a31baf0
+1654970558129	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654970599889	geckodriver	INFO	Listening on 127.0.0.1:60286
+1654970602950	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60287" "-no-remote" "-profile" "C:\\Users\\Haji\\AppData\\Local\\Temp\\rust_mozprofileCOln0w"
+1654970604925	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:60287
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Haji\\AppData\\Local\\Temp\\rust_mozprofileCOln0w\\search.json.mozlz4", (void 0)))
+1654970607623	Marionette	INFO	Listening on port 60297
+DevTools listening on ws://localhost:60287/devtools/browser/037a219b-f843-4dfa-b34a-0db0c07ba7e8
+1654970607737	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654970655148	geckodriver	INFO	Listening on 127.0.0.1:60388
+1654970658196	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60389" "-no-remote" "-profile" "C:\\Users\\Haji\\AppData\\Local\\Temp\\rust_mozprofileYcVQFi"
+1654970658722	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:60389
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Haji\\AppData\\Local\\Temp\\rust_mozprofileYcVQFi\\search.json.mozlz4", (void 0)))
+1654970660584	Marionette	INFO	Listening on port 60394
+DevTools listening on ws://localhost:60389/devtools/browser/d2aefeb1-415a-43de-81db-50d623a3c841
+1654970660886	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.bestbuy.com/-cJDnfjvk/Et/H6CugMg/QY1EprDt/RUpYAQ/LFtHM/xdZVTU, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.bestbuy.com/-cJDnfjvk/Et/H6CugMg/QY1EprDt/RUpYAQ/LFtHM/xdZVTU, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CnoZAs8LLGLdiZmvwH5JG-0Ol-GPeQ_utKIi1OQFCbs.js line 2 > eval line 4060 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://medianetworksecure.s3.amazonaws.com/FY23/Google/Headphones/FY23+HP+Google+Pixel+Buds+A-Series+DD/Stretto_160x600/index.html, line 1: ReferenceError: init is not defined
+SourceActor threw an exception: [Exception... "Failed to open input source 'javascript:false'"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 699"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:699:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:545:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2121:35
+addAllSources@resource://devtools/server/actors/thread.js:1482:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:288:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 699, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 699: NS_ERROR_NOT_AVAILABLE: Failed to open input source 'javascript:false'
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null
+JavaScript error: resource://devtools/server/actors/utils/sources-manager.js, line 432: TypeError: channel is null

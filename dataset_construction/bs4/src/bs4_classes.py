@@ -1,5 +1,4 @@
 from lxml.html import fromstring
-from tqdm import tqdm
 import requests
 import logging
 import re
@@ -207,7 +206,7 @@ class ReviewScraper:
             return
 
         # iterate over each review page
-        for rev_page in tqdm(self.review_pages):
+        for rev_page in self.review_pages:
 
             # make the request
             rev_req_content = requests.get(rev_page, headers=self.headers).content
